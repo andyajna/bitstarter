@@ -6,7 +6,7 @@ var buffer = new Buffer(256);
 
 fs.readFileSync(filename, 'utf-8', function(err, data) {
  if (err) throw err;
- buffer.write(data);
+ buffer.write(data, 'utf-8');
 }); 
 
 var output = buffer.toString('utf-8', 0, buffer.length);
